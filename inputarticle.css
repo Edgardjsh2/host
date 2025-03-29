@@ -1,0 +1,432 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif; /* Cambiado a Arial, estándar más usado */
+    margin: 0;
+    padding: 0;
+    background-color: #F4F8FB; /* Light blue background */
+    color: #003366; /* Dark blue text */
+    line-height: 1.6;
+}
+
+/* Header styles */
+header {
+    background-color: #072849; /* Dark blue */
+    color: #FFFFFF; /* White */
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.article-header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.article-header-title {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.article-header-title .article-page-icon {
+    width: 180px;
+    height: 55px;
+}
+
+.article-menu {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Space between menu items */
+}
+
+.article-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.article-menu .article-dropdown-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.article-menu .article-menu-icon {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: #FFFFFF; /* White */
+    position: relative;
+}
+
+.article-menu .article-menu-icon::before,
+.article-menu .article-menu-icon::after {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: #FFFFFF; /* White */
+    position: absolute;
+    left: 0;
+    transition: transform 0.3s ease;
+}
+
+.article-menu .article-menu-icon::before {
+    top: -8px;
+}
+
+.article-menu .article-menu-icon::after {
+    top: 8px;
+}
+
+.article-menu .article-dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 130%;
+    right: 0;
+    background-color: #072849; /* Match header background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    overflow: hidden;
+    z-index: 1000;
+    padding: 0;
+}
+
+.article-menu .article-dropdown-menu li a {
+    display: block;
+    padding: 0.8rem 1rem;
+    color: #FFFFFF; /* White */
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.article-menu .article-dropdown-menu li a:hover {
+    background-color: #049c8a; /* Slightly lighter than "Inicio" button hover color */
+}
+
+/* Show dropdown menu on hover */
+.article-menu .article-dropdown:hover .article-dropdown-menu {
+    display: block;
+}
+
+/* Show dropdown menu on toggle */
+.article-menu .article-dropdown-menu.show {
+    display: block;
+}
+
+.article-home-link {
+    display: inline-block;
+    color: #FFFFFF; /* White */
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.7rem 2rem;
+    background-color: #0d9c89; /* Light blue */
+    border-radius: 0px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.article-home-link:hover {
+    background-color: #036666; /* Medium blue */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Hero section styles */
+.article-hero {
+    background: url('banner.png') center center/cover no-repeat, #044b7a; /* Ensure center of the image is visible */
+    color: #FFFFFF; /* White */
+    text-align: center;
+    padding: 3rem 1rem;
+    position: relative; /* For overlay effect */
+}
+
+.article-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: 1; /* Place below text */
+}
+
+.article-hero h1,
+.article-hero p {
+    position: relative; /* Place above overlay */
+    z-index: 2;
+}
+
+.article-hero h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.article-hero p {
+    margin: 1rem 0 0;
+    font-size: 1.2rem;
+}
+
+/* Features section styles */
+.article-features {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.article-features h2 {
+    color: #043769; /* Dark blue */
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.article-feature-item {
+    margin: 1rem 0;
+}
+
+.article-feature-item h3 {
+    color: #0074D9; /* Light blue */
+    font-size: 1.5rem;
+}
+
+.article-feature-item p {
+    color: #053566; /* Dark blue */
+}
+
+/* Footer styles */
+footer {
+    background-color: #001a35; /* Dark blue */
+    color: #FFFFFF; /* White */
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+.article-footer-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.article-footer-menu ul li {
+    margin: 0 1rem;
+}
+
+.article-footer-menu ul li a {
+    color: #FFFFFF; /* White */
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.article-footer-menu ul li a:hover {
+    color: #0074D9; /* Light blue */
+}
+
+/* Estilos del artículo del blog */
+.article-blog {
+    padding: 2rem 1rem;
+    max-width: 800px;
+    margin: 2rem auto;
+    background-color: #FFFFFF; /* Fondo blanco */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.article-blog-title {
+    font-size: 2rem;
+    color: #043769; /* Azul oscuro */
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
+
+.article-blog-intro {
+    font-size: 1rem; /* Tamaño uniforme para todos los párrafos */
+    color: #555555; /* Gris medio */
+    margin-bottom: 2rem;
+    text-align: left; /* Quitar formato justificado */
+    line-height: 1.8;
+}
+
+.article-blog-section {
+    margin-bottom: 2rem;
+}
+
+.article-blog-section h3 {
+    font-size: 1.5rem;
+    color: #0074D9; /* Azul claro */
+    margin-bottom: 0.5rem;
+}
+
+.article-blog-section p {
+    font-size: 1rem; /* Tamaño uniforme para todos los párrafos */
+    color: #333333; /* Gris oscuro */
+    line-height: 1.8;
+    text-align: left; /* Quitar formato justificado */
+    margin-bottom: 1rem;
+}
+
+.article-blog-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Bordes redondeados */
+    margin-top: 1rem;
+}
+
+.article-blog-meta {
+    font-size: 0.9rem;
+    color: #AAAAAA; /* Gris claro */
+    text-align: left; /* Alinear a la izquierda */
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.article-blog-author,
+.article-blog-date {
+    color: #AAAAAA; /* Gris claro */
+    display: block; /* Forzar que estén en líneas separadas */
+    margin-top: 0.2rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .article-header-container {
+        flex-wrap: wrap; /* Allow wrapping for better alignment */
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem; /* Add padding for smaller screens */
+    }
+
+    .article-header-title {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 0;
+    }
+
+    .article-menu {
+        flex: 1;
+        justify-content: flex-end; /* Align menu to the right */
+    }
+
+    .article-dropdown-menu {
+        position: static; /* Make dropdown flow with the page */
+        width: 100%; /* Full width for mobile */
+        background-color: #003366; /* Match header background */
+        border-radius: 0; /* Remove border radius */
+        padding: 0.5rem 0;
+    }
+
+    .article-dropdown-menu li a {
+        padding: 1rem; /* Increase padding for touch targets */
+        font-size: 1rem; /* Adjust font size for readability */
+        color: #FFFFFF; /* White text for better contrast */
+    }
+
+    .article-home-link {
+        margin: 0; /* Remove extra margins for better alignment */
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+    }
+
+    .article-menu-icon {
+        width: 20px; /* Adjust size for smaller screens */
+        height: 2px;
+    }
+
+    .article-menu-icon::before,
+    .article-menu-icon::after {
+        width: 20px; /* Match icon size */
+    }
+
+    .article-hero h1 {
+        font-size: 2rem;
+    }
+
+    .article-hero p {
+        font-size: 1rem;
+    }
+
+    .article-features {
+        padding: 1.5rem 1rem;
+    }
+
+    .article-blog {
+        padding: 1.5rem;
+    }
+
+    .article-blog-title {
+        font-size: 1.8rem;
+    }
+
+    .article-blog-intro {
+        font-size: 1.1rem;
+    }
+
+    .article-blog-section h3 {
+        font-size: 1.4rem;
+    }
+
+    .article-blog-section p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .article-header-title h1 {
+        font-size: 1.2rem; /* Smaller font size for smaller screens */
+    }
+
+    .article-hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .article-hero p {
+        font-size: 0.9rem;
+    }
+
+    .article-features h2 {
+        font-size: 1.5rem;
+    }
+
+    .article-feature-item h3 {
+        font-size: 1.2rem;
+    }
+
+    .article-dropdown-menu li a {
+        font-size: 0.9rem; /* Slightly smaller font size for very small screens */
+    }
+
+    .article-header-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .article-header-title {
+        justify-content: center; /* Center the logo */
+        margin-bottom: 1rem; /* Add spacing below the logo */
+    }
+
+    .article-menu {
+        flex-direction: row; /* Align buttons horizontally */
+        justify-content: center; /* Center the buttons */
+        gap: 1rem; /* Add spacing between buttons */
+    }
+}

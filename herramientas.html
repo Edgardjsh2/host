@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Educación, enfermería, medicina, ciencia">
+    <meta name="author" content="Edgar">
+    <meta name="keywords" content="HTML, CSS, JavaScript, ejemplo">
+    <title>Nursesite</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <div class="header-container">
+            <div class="header-title">
+                <a href="index.html" class="logo link">
+                <img src="Logo.png" alt="Icono de la página" class="page-icon">
+                <h1></h1>
+                </a>
+            </div>
+            <nav class="menu">
+                <a href="index.html" class="home-link">Inicio</a>
+                <button class="dropdown-btn" aria-label="Abrir menú">
+                    <span class="menu-icon"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="herramientas.html">Herramientas</a></li>
+                    <li><a href="#about-nursesite">Acerca de</a></li> <!-- Updated link -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección principal -->
+    <main>
+        <!-- Banner o sección destacada -->
+        <section class="hero">
+            <h1>Herramientas</h1>
+        </section>
+        <body>
+            <h2>Lo sentimos, esta pagina aún esta en construccion:(</h2>
+        </body>
+
+            <footer>
+                <p>&copy; 2025 Nursesite. Todos los derechos reservados.</p>
+                <nav class="footer-menu">
+                    <ul>
+                        <li><a href="privacy.html">Política de Privacidad</a></li>
+                        <li><a href="terms.html">Términos y Condiciones</a></li>
+                    </ul>
+                </nav>
+            </footer>
+
+            <script>
+                // JavaScript para el menú desplegable
+                const dropdownBtn = document.querySelector('.dropdown-btn');
+                const dropdownMenu = document.querySelector('.dropdown-menu');
+
+                dropdownBtn.addEventListener('click', () => {
+                    dropdownMenu.classList.toggle('show');
+                });
+                // Cerrar el menú al hacer clic fuera de él
+            </script>
+        </body>
+</html>
