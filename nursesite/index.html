@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Educación, enfermería, medicina, ciencia">
+    <meta name="author" content="Edgar">
+    <meta name="keywords" content="HTML, CSS, JavaScript, ejemplo">
+    <title>Nursesite</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <div class="header-container">
+            <div class="header-title">
+                <a href="index.html" class="logo link">
+                <img src="Logo.png" alt="Icono de la página" class="page-icon">
+                <h1></h1>
+                </a>
+            </div>
+            <nav class="menu">
+                <a href="index.html" class="home-link">Inicio</a>
+                <button class="dropdown-btn" aria-label="Abrir menú">
+                    <span class="menu-icon"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="herramientas.html">Herramientas</a></li>
+                    <li><a href="#about-nursesite">Acerca de</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección principal -->
+    <main>
+        <!-- Banner o sección destacada -->
+        <section class="hero">
+            <h1>Bienvenido a Nursesite</h1>
+            <p>Tu sitio de confianza para contenido de calidad.</p>
+        </section>
+
+        <!-- Sección de características o servicios -->
+        <section class="features">
+            <h2>Nuestros Servicios</h2>
+            <div id="about-nursesite" class="about-feature-item"> <!-- Ensure ID matches -->
+                <div>
+                    <h3>Acerca de Nursesite</h3>
+                    <p>
+                        Nursesite es una plataforma gratuita dedicada a la difusión de contenido 
+                        y herramientas educativas diseñadas específicamente para estudiantes y 
+                        profesionales de enfermería. Nuestro objetivo es proporcionar recursos 
+                        que impulsen el aprendizaje, fortalezcan las habilidades prácticas y 
+                        promuevan el desarrollo profesional en el campo de la salud. En Nursesite, 
+                        creemos en el poder del conocimiento como motor de cambio, y trabajamos 
+                        para ser un apoyo confiable en tu camino hacia la excelencia.
+                    </p>
+                </div>
+                <img src="logocontraido.png" alt="Acerca de Nursesite">
+            </div>
+            <div class="feature-item">
+                <h3>Herramientas</h3>
+                <p>
+                    En Nursesite, ofrecemos una variedad de herramientas diseñadas para apoyar a estudiantes y profesionales de enfermería en su desarrollo académico y profesional. Estas herramientas incluyen:
+                    <ul>
+                        <li>Calculadoras Médicas: Simplifica cálculos complejos como dosis de medicamentos, índices de masa corporal (IMC) y otros parámetros clínicos esenciales.</li>
+                        <li>Guías de Procedimientos: Acceso a guías prácticas y detalladas para realizar procedimientos de enfermería de manera segura y eficiente.</li>
+                        <li>Plantillas y Recursos Educativos: Descarga plantillas para informes, hojas de evaluación y otros materiales útiles para el aprendizaje y la práctica clínica.</li>
+                        <li>Glosario Médico: Un glosario interactivo con términos médicos y de enfermería para facilitar el aprendizaje y la comprensión de conceptos clave.</li>
+                        <li>Simuladores Virtuales: Herramientas interactivas para practicar habilidades clínicas en un entorno virtual seguro.</li>
+                        <li>Biblioteca de Artículos: Acceso a artículos y publicaciones científicas relevantes para mantenerte actualizado en el campo de la salud.</li>
+                    </ul>
+                    Estas herramientas están diseñadas para ser intuitivas y accesibles, ayudándote a optimizar tu tiempo y mejorar tus habilidades en el ámbito de la enfermería.
+                </p>
+            </div>
+        </section>
+
+        <!-- Nuevas cajas cuadradas -->
+        <section class="square-boxes">
+            <a href="blog.html" class="square-box">
+                <div class="square-box-title">Blog</div>
+                <img src="imagebutonb.png" alt="Imagen 1" class="square-box-image">
+            </a>
+            <a href="herramientas.html" class="square-box">
+                <div class="square-box-title">Herramientas</div>
+                <img src="imagebutonh.png" alt="Imagen 2" class="square-box-image">
+            </a>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2025 Nursesite. Todos los derechos reservados.</p>
+        <nav class="footer-menu">
+            <ul>
+                <li><a href="privacy.html">Política de Privacidad</a></li>
+                <li><a href="terms.html">Términos y Condiciones</a></li>
+            </ul>
+        </nav>
+    </footer>
+    <script>
+        // Toggle dropdown menu visibility and hide when clicking outside
+        const dropdownBtn = document.querySelector('.dropdown-btn');
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+
+        document.addEventListener('click', function (event) {
+            if (dropdownBtn.contains(event.target)) {
+                dropdownMenu.classList.toggle('show');
+            } else {
+                dropdownMenu.classList.remove('show');
+            }
+        });
+    </script>
+</body>
+</html>
